@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="topbar">
+      <div class="brand"><span class="brand-icon">✦</span><span>Life Dashboard</span></div>
+      <button id="themeToggle" class="theme-button" type="button" aria-label="Ganti tema">☾ Dark mode</button>
+    </header>
+
+    <section class="greeting card">
+      <p class="eyebrow">YOUR PERSONAL SPACE</p>
+      <h1 id="clock">00:00:00</h1>
+      <p id="date" class="date"></p>
+      <h2 id="greetingText">Selamat datang!</h2>
+      <div class="name-row">
+        <span>Hai, <strong id="displayName">Teman</strong></span>
+        <button id="changeName" class="text-button" type="button">Ubah nama</button>
+      </div>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="card timer-card">
+        <div class="section-heading">
+          <div><p class="eyebrow">STAY FOCUSED</p><h2>Focus Timer</h2></div>
+          <span class="section-icon">◷</span>
+        </div>
+        <div id="timer" class="timer">25:00</div>
+        <p id="timerStatus" class="muted">Waktunya fokus pada satu hal.</p>
+        <div class="timer-actions">
+          <button id="startTimer" class="button primary" type="button">Start</button>
+          <button id="stopTimer" class="button secondary" type="button">Stop</button>
+          <button id="resetTimer" class="button secondary" type="button">Reset</button>
+        </div>
+      </article>
+
+      <article class="card tasks-card">
+        <div class="section-heading">
+          <div><p class="eyebrow">MAKE IT HAPPEN</p><h2>My Tasks</h2></div>
+          <span class="section-icon">✓</span>
+        </div>
+        <form id="taskForm" class="add-row">
+          <input id="taskInput" type="text" placeholder="Tulis tugas baru..." maxlength="100" autocomplete="off">
+          <button class="button primary" type="submit">Tambah</button>
+        </form>
+        <p id="taskMessage" class="message" aria-live="polite"></p>
+        <ul id="taskList" class="task-list"></ul>
+        <p id="taskCount" class="muted small">Belum ada tugas.</p>
+      </article>
+
+      <article class="card links-card">
+        <div class="section-heading">
+          <div><p class="eyebrow">YOUR FAVORITES</p><h2>Quick Links</h2></div>
+          <span class="section-icon">↗</span>
+        </div>
+        <form id="linkForm" class="link-form">
+          <input id="linkName" type="text" placeholder="Nama website" maxlength="30" required>
+          <input id="linkUrl" type="text" placeholder="https://example.com" required>
+          <button class="button primary" type="submit">Tambah Link</button>
+        </form>
+        <div id="linkList" class="link-list"></div>
+      </article>
+
+      <article class="card tip-card">
+        <p class="eyebrow">A LITTLE REMINDER</p>
+        <h2>Small steps every day.</h2>
+        <p class="muted">Tidak harus sempurna. Yang penting terus bergerak dan selesaikan satu hal pada satu waktu.</p>
+      </article>
+    </section>
+    <footer>Made for a more organized day ✦</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
